@@ -46,6 +46,7 @@
             this.Multiply = new System.Windows.Forms.Button();
             this.Enter = new System.Windows.Forms.Button();
             this.Divide = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Number1
@@ -172,7 +173,7 @@
             // 
             this.textBox.Location = new System.Drawing.Point(53, 270);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(426, 20);
+            this.textBox.Size = new System.Drawing.Size(279, 20);
             this.textBox.TabIndex = 12;
             // 
             // Plus
@@ -225,11 +226,20 @@
             this.Divide.UseVisualStyleBackColor = true;
             this.Divide.Click += new System.EventHandler(this.Divide_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(351, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 18;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 439);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Enter);
             this.Controls.Add(this.Multiply);
@@ -275,6 +285,7 @@
         private System.Windows.Forms.Button Multiply;
         private System.Windows.Forms.Button Enter;
         private System.Windows.Forms.Button Divide;
+        private System.Windows.Forms.Label label1;
     }
 }
 
