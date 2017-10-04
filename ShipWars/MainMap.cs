@@ -12,12 +12,17 @@ namespace ShipWars
 {
     public partial class MainMap : Form
     {
+        private ShipDoc doc;
+
         public MainMap()
         {
             InitializeComponent();
             CreateButtons();
             ClientSize = new Size(500, 500);
+            doc = new ShipDoc(1);
+            doc.Shuffle();
         }
+
         private void Button_Click(object sender, EventArgs e)
         {
             (sender as Button).BackColor = Color.Black;
