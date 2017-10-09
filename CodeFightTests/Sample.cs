@@ -22,35 +22,40 @@ namespace CodeFightTests
         [TestMethod]
         public void TestMethod1()
         {
+            almostIncreasingSequence(new int[] { 1, 3, 2 });
         }
-        int makeArrayConsecutive2(int[] statues)
+        bool almostIncreasingSequence(int[] sequence)
         {
-            int result = 0;
-            int min = statues[0];
-            for (int i = 0; i <= statues.Length - 1; i++)
+            int error = 0;
+            bool error1 = false;
+            bool error2 = false;
+            for (int i = 0; i <= sequence.Length - 1; i++)
             {
-                if (statues[i] < min)
+                if (sequence[i] > sequence[i + 1] && error != 1)
                 {
-                    min = statues[i];
+                    error = error + 1;
+                    if (error1 = sequence[i - 1] < sequence[i + 1])
+                    {
+                        ;
+                        continue;
+                    }
+                    if (error2 = sequence[i] < sequence[i + 2])
+                    {
+                        ;
+                        continue;
+                    }
+                    if (!(error1 || error2))
+                    {
+                        return false;
+                    }
                 }
-            }
-            int max = statues[0];
-            for (int i = 0; i <= statues.Length - 1; i++)
-            {
-                if (statues[i] > max)
+                else if (sequence[i] < sequence[i + 1])
                 {
-                    max = statues[i];
+                    continue;
                 }
+                else { return false; }
             }
-            for (int i = min; i < max; i++)
-            {
-                bool b = Array.Exists(statues, x => x == min + i);
-                if (!b)
-                {
-                    result = result + 1;
-                }
-            }
-            return result;
         }
     }
 }
+

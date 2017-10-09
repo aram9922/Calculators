@@ -16,7 +16,7 @@ namespace ShipWars
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMap());
+            Application.Run(new Main());
         }
     }
 }
